@@ -1,0 +1,44 @@
+body {
+    width: 900px;
+    margin: 50px auto;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  button {
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input {
+    font-size: 16px;
+    width: 220px;
+  }
+  
+  #displayArea {
+    width: 480px;
+    min-height: 40px;
+    font-size: 22px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* 設問3で使うハイライト用クラス */
+  .highlight {
+    background-color: yellow;
+  }
+  
+  #countText {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    font-size: 18px;
+  }
+  
+  th,
+  td {
+    padding: 3px 8px;
+  }
