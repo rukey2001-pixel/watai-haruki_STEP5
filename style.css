@@ -1,44 +1,120 @@
-body {
-    width: 900px;
-    margin: 50px auto;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-  
-  button {
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  input {
-    font-size: 16px;
-    width: 220px;
-  }
-  
-  #displayArea {
-    width: 480px;
-    min-height: 40px;
-    font-size: 22px;
-    padding: 5px;
+/* 全要素の幅計算を、paddingやborder込みにする */
+* {
     box-sizing: border-box;
-  }
-  
-  /* 設問3で使うハイライト用クラス */
-  .highlight {
-    background-color: yellow;
-  }
-  
-  #countText {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  table {
+}
+
+/* ページ全体の余白をなくし、基本フォントを設定 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ページ上部のheader部分の見た目を設定 */
+header {
+    background-color: pink;
+    padding: 20px;
+    text-align: center;
+}
+
+/* h1とh2の初期余白をなくす */
+h1,
+h2 {
+    margin: 0;
+}
+
+/* sidebarとmainを横並びにする親要素 */
+.container {
+    display: flex;
+    min-height: 220px;
+}
+
+/* sidebarの幅、背景色、内側余白を設定 */
+.sidebar {
+    width: 240px;
+    background-color: aquamarine;
+    padding: 40px 20px;
+}
+
+/* sidebar内のリストの余白を調整 */
+.sidebar ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* メインエリアを残り幅いっぱいに広げる */
+main {
+    flex: 1;
+    background-color: #fff0cc;
+    padding: 40px;
+}
+
+/* フォーム用テーブルの見た目を設定 */
+.form-table {
     border-collapse: collapse;
-    font-size: 18px;
-  }
-  
-  th,
-  td {
-    padding: 3px 8px;
-  }
+    border: 3px solid #333;
+    background-color: #fff8dc;
+    margin: 0 auto 10px;
+}
+
+/* テーブル内の見出しセルと通常セルの枠線・余白を設定 */
+.form-table th,
+.form-table td {
+    border: 3px solid #333;
+    padding: 4px 8px;
+}
+
+/* 見出しセルの文字が折り返されないようにする */
+.form-table th {
+    white-space: nowrap;
+}
+
+/* テキストボックスの幅計算を安定させる */
+input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* テキストエリアの幅計算を安定させる */
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* 戻るボタン・送信ボタンの配置を調整 */
+.button-area {
+    width: fit-content;
+    margin-left: auto;
+}
+
+/* footer部分の高さ、背景色、内側余白を設定 */
+footer {
+    min-height: 80px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+/* 送信完了画面のメイン部分の見た目を設定 */
+.send-complete {
+    background-color: white;
+    padding: 40px;
+}
+
+/* フォーム表の入力欄・表示欄の幅をそろえる */
+.form-table td {
+    min-width: 30ch;
+}
+
+/* contact.php のテキストボックスの幅を40文字分にそろえる */
+.form-table input[type="text"] {
+    width: 30ch;
+}
+
+/* お問い合わせ内容のテキストエリアも同じ幅にそろえる */
+.form-table textarea {
+    width: 30ch;
+}
+
+/* confirm.php のお問い合わせ内容が長い場合に折り返す */
+.form-table td {
+    word-break: break-word;
+}
